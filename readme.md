@@ -1,4 +1,5 @@
-# ProjectFitness is a platform for monitoring and tracking fitness progress. You can get workout plans from trainers, or create your own!
+# ProjectFitness is a platform for monitoring and tracking fitness progress. 
+# You can get workout plans from trainers, or create your own!
 
 ## Backend Goals:
 
