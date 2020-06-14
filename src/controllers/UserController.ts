@@ -20,7 +20,7 @@ class UserController {
         }
 
         if(user)
-            res.status(200).send(user)
+            return res.status(200).send(user)
     };
     
 }
