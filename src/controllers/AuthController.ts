@@ -23,7 +23,7 @@ class AuthController {
         }
         catch(e) {
             console.error(e);
-            return;
+            return res.status(500).send('Something went wrong.');
         }
 
         if (user) 
@@ -50,7 +50,7 @@ class AuthController {
         }
         catch(e) {
             console.error(e);
-            return;
+            return res.status(500).send('Something went wrong.');
         }
 
         if(!user) 
@@ -87,7 +87,7 @@ class AuthController {
         }
         catch(e) {
             console.error(e);
-            return;
+            return res.status(500).send('Something went wrong.');
         }
 
         if(!user) 
@@ -103,7 +103,7 @@ class AuthController {
         let newHashedPassword:string = await bcrypt.hash(newPassword, saltRounds);
         user.password = newHashedPassword;
         await userRepository.save(user);
-        
+
         return res.status(202).send("Password Changed.");
     };
 

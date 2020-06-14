@@ -16,7 +16,7 @@ class UserController {
         }
         catch(e) {
             console.error(e);
-            return;
+            return res.status(500).send('Something went wrong.');
         }
 
         if(user)
